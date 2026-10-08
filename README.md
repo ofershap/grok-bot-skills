@@ -36,7 +36,6 @@ This library is for Grok bot workflows, maintained independently of xAI. The fil
 | [distill-need](skills/distill-need) | Separates the literal ask from the real need and offers 1-3 ways to hit it, including "don't build". | A request looks like a proposed solution, or someone is stuck understanding a PR, design, or thread. |
 | [make-it-click](skills/make-it-click) | Finds the smallest thing blocking understanding and replaces the failed mental model with a concrete one. | An explanation was correct but did not land. |
 | [monthly-checkpoint](skills/monthly-checkpoint) | Reviews a month of a new habit or data source and sends a short keep/change/stop summary. | About 30 days after turning on something new, like meeting recordings or a digest. |
-
 | [claim-check](skills/claim-check) | Check a claim against dated evidence, not repetition. | The user wants to check a factual claim, viral post, or disputed announcement rather than summarize it. |
 | [assumption-audit](skills/assumption-audit) | Test the question before answering it. | A question contains an unproven cause, loaded premise, or undefined claim such as best, safe, or guaranteed. |
 | [consensus-map](skills/consensus-map) | Show the shape of disagreement without manufacturing consensus. | The user asks what credible sources agree or disagree about on a contested question. |
