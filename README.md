@@ -6,6 +6,20 @@ Each skill is a plain `SKILL.md` in the [Agent Skills](https://agentskills.io) f
 
 ## Install
 
+### In Grok Bot
+
+Paste this into any Grok Bot chat:
+
+```text
+Install the agent skills from https://github.com/ofershap/grok-bot-skills into my skill library. Read each skills/<name>/SKILL.md, save each one under its folder name with its description as-is, then list what you installed.
+```
+
+### In Cursor
+
+[![Open in Cursor](https://img.shields.io/badge/Open_in-Cursor-000000?logo=cursor&logoColor=white)](https://cursor.com/link/prompt?text=Install%20the%20agent%20skills%20from%20https%3A%2F%2Fgithub.com%2Fofershap%2Fgrok-bot-skills%3A%20read%20each%20skills%2F%3Cname%3E%2FSKILL.md%20and%20add%20them%20to%20my%20skill%20library%2C%20keeping%20each%20skill%27s%20name%20and%20description%20as-is.%20Then%20list%20what%20you%20installed.)
+
+### With the skills CLI
+
 All skills:
 
 ```bash
