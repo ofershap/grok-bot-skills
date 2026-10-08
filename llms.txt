@@ -15,6 +15,23 @@
 - Make it click: skills/make-it-click/SKILL.md - concrete explanations when a previous explanation failed.
 - Monthly checkpoint: skills/monthly-checkpoint/SKILL.md - evidence-based keep/change/stop review of a habit or tool.
 
+
+## Community-inspired skills
+- Claim check: skills/claim-check/SKILL.md - Check a claim against dated evidence, not repetition.
+- Assumption audit: skills/assumption-audit/SKILL.md - Test the question before answering it.
+- Consensus map: skills/consensus-map/SKILL.md - Show the shape of disagreement without manufacturing consensus.
+- Source audit: skills/source-audit/SKILL.md - Read laterally and follow a claim back to its evidence.
+- Competitor compare: skills/competitor-compare/SKILL.md - Compare eligibility first, then comparable costs.
+- Morning brief: skills/morning-brief/SKILL.md - Keep commitments, deadlines, and missing data separate.
+- Research review: skills/research-review/SKILL.md - Review original evidence, not another assistant's confidence.
+- Socratic practice: skills/socratic-practice/SKILL.md - Make the learner do the next useful piece of work.
+- Reflection to action: skills/reflection-to-action/SKILL.md - Turn a specific experience into a small experiment.
+- Rubric rewrite: skills/rubric-rewrite/SKILL.md - Define good before revising.
+- Quote-grounded answer: skills/quote-grounded-answer/SKILL.md - Extract the evidence before synthesizing the answer.
+- Root-cause debug: skills/root-cause-debug/SKILL.md - Reproduce, isolate, test, then verify.
+- Code walkthrough: skills/code-walkthrough/SKILL.md - Follow a real flow through real source.
+- Attribution ledger: SOURCES.md
+
 ## Installation and limits
 - Install through a compatible Agent Skills loader, or use selected instructions manually as context.
 - CLI: npx skills add ofershap/grok-bot-skills
