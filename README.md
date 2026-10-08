@@ -14,8 +14,6 @@
 </p>
 
 <p align="center">
-  <a href="https://skills.sh/ofershap/grok-bot-skills"><img src="https://skills.sh/b/ofershap/grok-bot-skills" alt="skills.sh" /></a>
-  &nbsp;
   <a href="https://agentskills.io/specification"><img src="https://img.shields.io/badge/Agent_Skills-format-0ea5e9.svg" alt="Agent Skills format" /></a>
   &nbsp;
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" /></a>
