@@ -37,6 +37,27 @@ This is a community collection for Grok bot workflows, maintained independently 
 | [make-it-click](skills/make-it-click) | Finds the smallest thing blocking understanding and replaces the failed mental model with a concrete one. | An explanation was correct but did not land. |
 | [monthly-checkpoint](skills/monthly-checkpoint) | Reviews a month of a new habit or data source and sends a short keep/change/stop summary. | About 30 days after turning on something new, like meeting recordings or a digest. |
 
+
+### Community-inspired workflows
+
+Thirteen focused workflows collected from Grok guides, practitioner posts, and skills used with similar assistants. Each links its source and includes a synthetic example. They are original adaptations, not claims of runtime-tested Grok compatibility. See [SOURCES.md](SOURCES.md) for the attribution ledger.
+
+| Skill | What it does | Use it when |
+| --- | --- | --- |
+| [claim-check](skills/claim-check) | Check a claim against dated evidence, not repetition. | the user wants to check a factual claim, viral post, or disputed announcement rather than summarize it. |
+| [assumption-audit](skills/assumption-audit) | Test the question before answering it. | a question contains an unproven cause, loaded premise, or undefined claim such as best, safe, or guaranteed. |
+| [consensus-map](skills/consensus-map) | Show the shape of disagreement without manufacturing consensus. | the user asks what credible sources agree or disagree about on a contested question. |
+| [source-audit](skills/source-audit) | Read laterally and follow a claim back to its evidence. | the user has an article, chart, or citation and needs to know whether it supports a specific claim. |
+| [competitor-compare](skills/competitor-compare) | Compare eligibility first, then comparable costs. | comparing a short list of products or vendors against explicit buying or positioning criteria. |
+| [morning-brief](skills/morning-brief) | Keep commitments, deadlines, and missing data separate. | the user provides today's calendar and task notes and wants a source-traceable plan with conflicts and gaps. |
+| [research-review](skills/research-review) | Review original evidence, not another assistant's confidence. | a research memo or numerical recommendation needs a separate evidence-checking pass before reliance or sharing. |
+| [socratic-practice](skills/socratic-practice) | Make the learner do the next useful piece of work. | the user wants active practice learning a concept, with hints and a check of understanding rather than an instant solution. |
+| [reflection-to-action](skills/reflection-to-action) | Turn a specific experience into a small experiment. | the user wants to learn from a recent team experience or personal work setback and choose a concrete improvement. |
+| [rubric-rewrite](skills/rubric-rewrite) | Define good before revising. | a draft feels generic or weak and the user wants a revision guided by explicit quality criteria and examples. |
+| [quote-grounded-answer](skills/quote-grounded-answer) | Extract the evidence before synthesizing the answer. | answering a specific question from a long document or several supplied documents and exact textual support matters. |
+| [root-cause-debug](skills/root-cause-debug) | Reproduce, isolate, test, then verify. | investigating a reproducible software bug, failing test, or surprising behavior before applying a fix. |
+| [code-walkthrough](skills/code-walkthrough) | Follow a real flow through real source. | the user wants to understand an unfamiliar codebase or generated code through a traceable execution path. |
+
 ## Install
 
 ### In Grok Bot
@@ -105,13 +126,15 @@ No. The files follow the Agent Skills format and can be used by compatible loade
 
 ### Does installing a skill run code or send messages?
 
-The five current skills are Markdown instructions. They do not include an executable runtime. An assistant may act on instructions using its own tools, so read each file and keep your normal approval rules.
+All 18 current skills are Markdown instructions. They do not include an executable runtime. An assistant may act on instructions using its own tools, so read each file and keep your normal approval rules.
 
 ### How do agents find the right skill?
 
 Each file includes a `name` and trigger-oriented `description`. The catalog and [llms.txt](llms.txt) provide an index. Discovery and activation depend on the assistant; an index is not a guarantee of ranking or adoption.
 
 ## Credits
+
+The 13 community-inspired additions have a source in every skill and in [SOURCES.md](SOURCES.md). They are written here as original workflows; source authors have not endorsed or tested these adaptations.
 
 `distill-need` and `make-it-click` are adapted from [AdirD/agent-shell-hamelech](https://github.com/AdirD/agent-shell-hamelech) under the MIT License:
 
