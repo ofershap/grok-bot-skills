@@ -1,14 +1,28 @@
-# grok-bot-skills
+# Grok Bot Skills: reusable skills for AI assistants
 
-Small, sharp skills that make a chat assistant or coding agent easier to work with. Shorter answers, messages that sound like you, real needs instead of literal asks, explanations that finally land, and an honest monthly check on whether a new habit pays off.
+Open-source Agent Skills for Grok bot workflows and skill-compatible AI assistants. Get shorter answers, Slack drafts in your own voice, clearer explanations, and a monthly check on whether a new habit is useful.
 
-Each skill is a plain `SKILL.md` in the [Agent Skills](https://agentskills.io) format, so it works with any agent that loads skills: drop it in, and the agent picks it up when the description matches.
+Five focused skills, plain Markdown, MIT licensed. Read the [catalog](#catalog), install one skill, or [contribute your own](CONTRIBUTING.md).
+
+## What is a Grok bot skill?
+
+A skill is a folder with a `SKILL.md` file: a description of when to use it, followed by instructions for the assistant. This collection uses the [Agent Skills format](https://agentskills.io/specification). It is a community library, not an official xAI product.
+
+These are instructions, not a Grok API client, model, browser extension, or hosted bot. Your assistant must have a way to load them. Loading a file does not grant account access or permission to send messages.
+
+## Use with Grok or another assistant
+
+- **Skill-compatible agent:** use the installer below, then check that your agent discovers the skill and activates it for a matching request.
+- **Grok bot with a custom skill loader:** add the selected `SKILL.md` through that bot's documented loader. The loader controls installation and activation; this repo does not provide one.
+- **Chat-only interface:** paste the instructions as context if your interface supports it. This is manual use, not automatic skill discovery or a guaranteed persistent installation.
+
+Grok bot loaders have not been tested here. A successful CLI install alone does not prove that a particular Grok interface loads skills.
 
 ## Install
 
 ### In Grok Bot
 
-Paste this into any Grok Bot chat:
+If your Grok Bot has a skill library and can read repository files, paste this prompt into its chat:
 
 ```text
 Install the agent skills from https://github.com/ofershap/grok-bot-skills into my skill library. Read each skills/<name>/SKILL.md, save each one under its folder name with its description as-is, then list what you installed.
@@ -49,6 +63,42 @@ cp -R grok-bot-skills/skills/<name> .agents/skills/
 | [distill-need](skills/distill-need) | Separates the literal ask from the real need and offers 1-3 ways to hit it, including "don't build". | A request looks like a proposed solution, or someone is stuck understanding a PR, design, or thread. |
 | [make-it-click](skills/make-it-click) | Finds the smallest thing blocking understanding and replaces the failed mental model with a concrete one. | An explanation was correct but did not land. |
 | [monthly-checkpoint](skills/monthly-checkpoint) | Reviews a month of a new habit or data source and sends a short keep/change/stop summary. | About 30 days after turning on something new, like meeting recordings or a digest. |
+
+## Try a skill
+
+| Skill | Test prompt | What to look for |
+| --- | --- | --- |
+| short-answers | "Summarize this decision in two sentences." | Answer first, no padded introduction. |
+| slack-voice | "Draft a Slack update based on these messages." | Matches supplied examples and waits before sending. |
+| distill-need | "I think we need a dashboard. Help me decide." | Identifies the actual need before proposing a build. |
+| make-it-click | "I still do not understand this explanation." | Uses a concrete example instead of repeating the same explanation. |
+| monthly-checkpoint | "Review whether this month's new habit helped." | Uses available evidence and names missing data. |
+
+Use synthetic examples. Do not paste private messages, credentials, or customer data into a public issue.
+
+## Share a useful Grok bot skill
+
+Have a skill that helps your Grok bot or another assistant? [Open a pull request](https://github.com/ofershap/grok-bot-skills/pulls) with the skill, a trigger, and a before/after example. You can also [suggest a skill in an issue](https://github.com/ofershap/grok-bot-skills/issues/new).
+
+Read [CONTRIBUTING.md](CONTRIBUTING.md) for the format, test checklist, attribution, and safety checks. New contributions are reviewed before merging. Useful, tested skills matter more than the number of files.
+
+## FAQ
+
+### Is this an official Grok or xAI repository?
+
+No. This is a community collection maintained independently of xAI.
+
+### Does it work only with Grok?
+
+No. The files follow the Agent Skills format and can be used by compatible loaders. Features such as Slack history or scheduled reviews require your assistant's own integrations and permissions.
+
+### Does installing a skill run code or send messages?
+
+The five current skills are Markdown instructions. They do not include an executable runtime. An assistant may act on instructions using its own tools, so read each file and keep your normal approval rules.
+
+### How do agents find the right skill?
+
+Each file includes a `name` and trigger-oriented `description`. The catalog and [llms.txt](llms.txt) provide an index. Discovery and activation depend on the assistant; an index is not a guarantee of ranking or adoption.
 
 ## Credits
 
