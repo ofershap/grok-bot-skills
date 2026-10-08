@@ -1,22 +1,43 @@
-# Grok Bot Skills: reusable skills for AI assistants
+<p align="center">
+  <img src="assets/logo.svg" alt="Grok Bot Skills" width="100" height="100" />
+</p>
 
-Open-source Agent Skills for Grok bot workflows and skill-compatible AI assistants. Get shorter answers, Slack drafts in your own voice, clearer explanations, and a monthly check on whether a new habit is useful.
+<h1 align="center">grok-bot-skills</h1>
 
-Five focused skills, plain Markdown, MIT licensed. Read the [catalog](#catalog), install one skill, or [contribute your own](CONTRIBUTING.md).
+<p align="center">
+  <strong>Teach your Grok bot a new trick with one Markdown file.</strong>
+</p>
 
-## What is a Grok bot skill?
+<p align="center">
+  A community library of ready-to-install Agent Skills for Grok bots<br>
+  and any skill-compatible AI assistant.
+</p>
 
-A skill is a folder with a `SKILL.md` file: a description of when to use it, followed by instructions for the assistant. This collection uses the [Agent Skills format](https://agentskills.io/specification). It is a community library, not an official xAI product.
+<p align="center">
+  <a href="https://skills.sh/ofershap/grok-bot-skills"><img src="https://skills.sh/b/ofershap/grok-bot-skills" alt="skills.sh" /></a>
+  &nbsp;
+  <a href="https://agentskills.io/specification"><img src="https://img.shields.io/badge/Agent_Skills-format-0ea5e9.svg" alt="Agent Skills format" /></a>
+  &nbsp;
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" /></a>
+  &nbsp;
+  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome" /></a>
+</p>
 
-These are instructions, not a Grok API client, model, browser extension, or hosted bot. Your assistant must have a way to load them. Loading a file does not grant account access or permission to send messages.
+---
 
-## Use with Grok or another assistant
+Skills are folders of instructions that an AI assistant loads when a matching task comes up. Each skill in this library is one `SKILL.md`: a name, a trigger description, and the instructions. No runtime, no dependencies, nothing to deploy.
 
-- **Skill-compatible agent:** use the installer below, then check that your agent discovers the skill and activates it for a matching request.
-- **Grok bot with a custom skill loader:** add the selected `SKILL.md` through that bot's documented loader. The loader controls installation and activation; this repo does not provide one.
-- **Chat-only interface:** paste the instructions as context if your interface supports it. This is manual use, not automatic skill discovery or a guaranteed persistent installation.
+This is a community collection for Grok bot workflows, maintained independently of xAI. The files follow the open [Agent Skills format](https://agentskills.io/specification), so any skill-compatible assistant can load them. Grok bot skill loaders have not been tested here: a successful CLI install alone does not prove that a particular Grok interface loads skills.
 
-Grok bot loaders have not been tested here. A successful CLI install alone does not prove that a particular Grok interface loads skills.
+## Catalog
+
+| Skill | What it does | Use it when |
+| --- | --- | --- |
+| [short-answers](skills/short-answers) | BLUF replies in plain, ASD-STE100-style English with a direct "dugri" tone. | Every reply to the owner should be readable in seconds. |
+| [slack-voice](skills/slack-voice) | Drafts Slack messages in the owner's own register, one language at a time, and learns from their rewrites. | The agent drafts or sends Slack messages on someone's behalf. |
+| [distill-need](skills/distill-need) | Separates the literal ask from the real need and offers 1-3 ways to hit it, including "don't build". | A request looks like a proposed solution, or someone is stuck understanding a PR, design, or thread. |
+| [make-it-click](skills/make-it-click) | Finds the smallest thing blocking understanding and replaces the failed mental model with a concrete one. | An explanation was correct but did not land. |
+| [monthly-checkpoint](skills/monthly-checkpoint) | Reviews a month of a new habit or data source and sends a short keep/change/stop summary. | About 30 days after turning on something new, like meeting recordings or a digest. |
 
 ## Install
 
@@ -54,15 +75,7 @@ mkdir -p .agents/skills
 cp -R grok-bot-skills/skills/<name> .agents/skills/
 ```
 
-## Catalog
-
-| Skill | What it does | Use it when |
-| --- | --- | --- |
-| [short-answers](skills/short-answers) | BLUF replies in plain, ASD-STE100-style English with a direct "dugri" tone. | Every reply to the owner should be readable in seconds. |
-| [slack-voice](skills/slack-voice) | Drafts Slack messages in the owner's own register, one language at a time, and learns from their rewrites. | The agent drafts or sends Slack messages on someone's behalf. |
-| [distill-need](skills/distill-need) | Separates the literal ask from the real need and offers 1-3 ways to hit it, including "don't build". | A request looks like a proposed solution, or someone is stuck understanding a PR, design, or thread. |
-| [make-it-click](skills/make-it-click) | Finds the smallest thing blocking understanding and replaces the failed mental model with a concrete one. | An explanation was correct but did not land. |
-| [monthly-checkpoint](skills/monthly-checkpoint) | Reviews a month of a new habit or data source and sends a short keep/change/stop summary. | About 30 days after turning on something new, like meeting recordings or a digest. |
+These are instructions, not a Grok API client, model, browser extension, or hosted bot. Your assistant must have a way to load them. On a chat-only interface, paste a skill's instructions as context: that is manual use, not automatic skill discovery.
 
 ## Try a skill
 
@@ -109,6 +122,17 @@ Each file includes a `name` and trigger-oriented `description`. The catalog and 
 
 Each adapted file keeps the original copyright and license notice at the top.
 
+## Author
+
+[![Made by ofershap](https://gitshow.dev/api/card/ofershap)](https://gitshow.dev/ofershap)
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/ofershap)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=flat&logo=github&logoColor=white)](https://github.com/ofershap)
+
+---
+
+<sub>README built with [README Builder](https://ofershap.github.io/readme-builder/)</sub>
+
 ## License
 
-MIT. See [LICENSE](LICENSE).
+[MIT](LICENSE) &copy; [Ofer Shapira](https://github.com/ofershap)
